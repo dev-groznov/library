@@ -1,0 +1,189 @@
+/*
+    Josh's Custom CSS Reset
+    https://www.joshwcomeau.com/css/custom-css-reset/
+
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*:not(dialog) {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, p, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1, p, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* code */
+
+:root {
+    background-color: #F3E9D7;
+    font-family: 'Roboto', sans-serif;
+    color: #3B2A22;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 30%);
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7A553A;
+    height: 5rem;
+}
+
+.new-book {
+    border: 5px solid #3B2A22;
+    background-color: #D6BFA6;
+    color: #3B2A22;
+    border-radius: 1rem;
+    width: 6.5rem;
+    height: 2.5rem;
+}
+
+.new-book:hover {
+    border: 6px solid #3B2A22;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.form-new-book {
+    display: flex;
+    flex-direction: column;
+}
+
+#read-new-book {
+    margin-bottom: 8px; 
+}
+
+.my-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+    padding: 30px
+}
+
+.book {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: start;
+    background-color: #D6BFA6;
+    border: 5px solid #B08968;
+    border-radius: 10px;
+}
+
+.title {
+    grid-column: 1 / 3;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.author {
+    grid-column: 1 / 3;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.pages {
+    grid-column: 1 / 3;
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+.read {
+    align-self: center;
+}
+
+.deleteBook {
+    align-self: center;
+    border: 5px solid #B08968;
+    background-color: #F3E9D7;
+    color: #3B2A22;
+    border-radius: 1rem;
+    height: 2.5rem;
+}
+
+.deleteBook:hover {
+    border: 6px solid #7A553A;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input:focus {
+    outline: none;
+}
+
+dialog {
+  background-color: #D6BFA6;
+  color: #3B2A22;
+  border: 7px solid #7A553A;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+}
+
+.form-new-book > input {
+  background-color: #F3E9D7;
+  color: #3B2A22;
+  border: 3px solid #7A553A;
+  border-radius: 1rem;
+  padding-left: 8px;
+}
+
+.form-new-book > button {
+  background-color: #F3E9D7;
+  color: #3B2A22;
+  border: 3px solid #7A553A;
+  border-radius: 1rem;
+  padding-left: 8px;
+}
+
+.cancel {
+  margin-top: 8px;
+}
