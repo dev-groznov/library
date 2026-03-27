@@ -6,4 +6,4 @@ This project taught me how to create objects using object constructors.
 
 During with [The Odin Project][def]
 
-[def]: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
+[def]: https://www.theodinproject.com/lessons/node-path-javascript-library
