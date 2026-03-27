@@ -19,6 +19,8 @@ function Book(title, author, pages, read) {
 function getBooks() {
     for (let book of myLibrary) {
         const newBook = document.createElement('div');
+        const footerPartBook = document.createElement('div');
+        footerPartBook.className = 'footer-part-book';
         newBook.classList.add('book', `book-${myLibrary.indexOf(book)}`);
         myBooks.appendChild(newBook);
         for (let key in book) {
@@ -39,9 +41,9 @@ function getBooks() {
                 label.textContent = "Read?";
                 input.checked = book[key];
                 input.addEventListener('change', (event) => {
-                    myLibrary[myLibrary.indexOf(book)]["read"] = event.target.checked
+                    myLibrary[myLibrary.indexOf(book)]["read"] = event.target.checked;
                 })
-                newBook.appendChild(parameter);
+                footerPartBook.appendChild(parameter);
                 parameter.appendChild(label);
                 label.appendChild(input);
             } else if (key !== "id" && key !== 'info') {
@@ -54,11 +56,12 @@ function getBooks() {
         const deleteBookBtn = document.createElement('button');
         deleteBookBtn.className = "deleteBook";
         deleteBookBtn.textContent = "Delete";
-        newBook.appendChild(deleteBookBtn);
+        footerPartBook.appendChild(deleteBookBtn);
         deleteBookBtn.addEventListener('click', () => {
             myBooks.removeChild(newBook);
             myLibrary.pop(myLibrary.indexOf(book));
         })
+        newBook.appendChild(footerPartBook)
     }
 }
 

@@ -98,16 +98,16 @@ button:hover {
 
 .my-books {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 30px;
     padding: 30px
 }
 
 .book {
+    height: auto;
     padding: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-content: start;
     background-color: #D6BFA6;
     border: 5px solid #B08968;
@@ -119,18 +119,27 @@ button:hover {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    overflow-wrap: anywhere;
 }
 
 .author {
     grid-column: 1 / 3;
     text-align: center;
     font-size: 0.9rem;
+    overflow-wrap: anywhere;
 }
 
 .pages {
     grid-column: 1 / 3;
     text-align: center;
     padding-bottom: 200px;
+    overflow-wrap: anywhere;
+}
+
+.footer-part-book {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
 }
 
 .read {
